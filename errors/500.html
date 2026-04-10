@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 • TurnTable</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        .error-page {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .error-icon {
+            font-size: 80px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 600;
+            background: var(--wave-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .error-title {
+            font-size: 28px;
+            margin-top: 10px;
+        }
+
+        .error-desc {
+            margin-top: 10px;
+            color: var(--text-dim);
+            max-width: 500px;
+        }
+
+        .error-actions {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .error-btn {
+            padding: 12px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--wave-grad);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 12px var(--neon-glow);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--btn-outline);
+            color: var(--text-light);
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            background: var(--bg-black);
+            border-top: 1px solid var(--border-color);
+            opacity: 0.8;
+            font-size: 14px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <a href="/" data-i18n="nav_about">Sobre</a>
+            <a href="/" data-i18n="nav_features">Recursos</a>
+        </div>
+        <a href="/" class="logo">
+            <img id="logo-img" src="../img/Logo-Branco.png" alt="TurnTable">
+        </a>
+        <nav>
+            <a href="#" class="login-btn" data-i18n="nav_login">Entrar</a>
+            <select id="language-toggle" class="lang-select">
+                <option value="pt">PT</option>
+                <option value="en">EN</option>
+            </select>
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="error-page">
+        <i class="fa-solid fa-compact-disc error-icon"></i>
+        <div class="error-code">500</div>
+        <h2 class="error-title" data-i18n="error_500_title">O toca-discos travou</h2>
+        <p class="error-desc" data-i18n="error_500_desc">
+            Algo deu errado enquanto tentávamos reproduzir esta faixa.
+            Nossa equipe já está ajustando a agulha do TurnTable.
+        </p>
+
+        <div class="error-actions">
+            <a href="/" class="error-btn btn-primary" data-i18n="btn_home">
+                Voltar ao TurnTable
+            </a>
+            <a href="javascript:history.back()" class="error-btn btn-secondary" data-i18n="btn_back">
+                Voltar
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p data-i18n="footer">© 2026 TurnTable — Todos os direitos reservados</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
